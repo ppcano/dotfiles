@@ -1,0 +1,144 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+
+program
+  .option('git, --git [type]', 'fork update merge new reset push')
+  .option('android, --android', '')
+  .option('ripple, --ripple', '')
+  .option('heroku, --heroku', '')
+  .option('phonegap, --phonegap', '')
+  .option('mongo, --mongo', '')
+  .parse(process.argv);
+
+if (program.git) { 
+
+  var cmd = program.git; 
+
+  if (cmd === 'fork') { 
+
+    console.log( "  git clone git@github.com:ppcano/project.git");
+    console.log( "  cd projects");
+    console.log( "  git remote add upstream https://github.com/original/project.git");
+    console.log( "  git fetch upstream");
+
+  } else if (cmd === 'update') { 
+ 
+    console.log( "-->FORK (pull in upstream changes)");
+    console.log( "    git fetch upstream");
+    console.log( "    git merge upstream/master");
+    console.log( "-->CLONE");
+    console.log( "    git pull");
+
+  } else if (cmd === 'push') { 
+ 
+    console.log( "-->git push origin master");
+    console.log( "-->git push origin current_branch( either master or branch_name, when move to this branch)");
+
+  } else if (cmd === 'create') { 
+ 
+    console.log( "Creating new (go to github)");
+    console.log( "  mkdir project// cd project//git init // touch // git add . // git commit.....  ");
+    console.log( "  git remote add origin git@github.com:ppcano/sc-model.git");
+    console.log( "  git push -u origin master");
+
+    console.log( "--------------------------------------- ");
+    console.log( "  [git branch] -a 'list' || -d name 'delete' || name 'create local branch'  ");
+    console.log( "  (Create Remote branch an fetch -f) git remote add branch_name git://github.com/ppcano/name.git -f");
+    console.log( "  git checkout branch_name ( move to different branch )");
+    console.log( "  git checkout -b branch_name remotes/origin/branch_name ( to work on this branch )");
+    console.log( "  git push --all ( create the remote branch on github remote [ after -> create branch || move to branch ] )");
+
+  } else if (cmd === 'merge') { 
+ 
+    console.log( "Merge branch to master");
+    console.log( "-->git checkout master");
+    console.log( "-->git merge branch");
+
+  } else if (cmd === 'reset') { 
+ 
+    console.log( "  git reset --hard HEAD ( the repository )");
+    console.log( "  git checkout -- hello.rb");
+    console.log( "  git checkout HEAD hello.rb");
+
+  } else {
+    console.log( program.helpInformation() );
+  }
+
+}
+
+if (program.android) { 
+
+  console.log( "--------------------------------------- ");
+  console.log( "Android SDK Manager");
+  console.log( "    android");
+  console.log( "--------------------------------------- ");
+  console.log( "Run Emulator ( localhost at 10.0.2.2)");
+  console.log( "    emulator -avd default");
+  console.log( "--------------------------------------- ");
+  console.log( "Install App");
+  console.log( "    adb install *.apk");
+  console.log( "    adb uninstall packagename(com.pepe)");
+  console.log( "--------------------------------------- ");
+  console.log( "adb logcat -v [long]");
+  console.log( "    http://developer.android.com/guide/developing/debugging/debugging-log.html");
+  console.log( "--------------------------------------- ");
+
+}
+
+if (program.ripple) { 
+  console.log( "--------------------------------------- ");
+  console.log( "Update code");
+  console.log( "    git pull");
+  console.log( "    ./configure (solo para importar librerias nuevas)");
+  console.log( "--------------------------------------- ");
+  console.log( "    jake");
+  console.log( "--------------------------------------- ");
+  console.log( "First Time: Install (pkg/chromium) as chrome unpacked extension ");
+  console.log( "--------------------------------------- ");
+}
+
+if (program.heroku) { 
+
+  console.log( "--------------------------------------- ");
+  console.log( "heroku open");
+  console.log( "heroku run bash");
+  console.log( "heroku config");
+  console.log( "  heroku config:add PASSWORD=ppcano");
+  console.log( "  heroku config:remove PASSWORD");
+  console.log( "  git push heroku master");
+  console.log( "  git push heroku heroku:master");
+
+  console.log( ">>Bring Heroku App");
+  console.log( "  git remote add heroku git@heroku.com:ppcano-fb-test.git");
+
+  console.log( ">>CEDAR ");
+  console.log( " heroku create --stack cedar");
+  console.log( " heroku ps:scale web=1");
+  console.log( ">>CHANGE NAME ");
+  console.log( "  heroku rename newname");
+  console.log( "  git remote rm heroku");
+  console.log( "  git remote add heroku git@heroku.com:newproject.git");
+  console.log( "--------------------------------------- ");
+}
+
+if (program.phonegap) { 
+  console.log( "--------------------------------------- ");
+  console.log( "bpm rebuild");
+  console.log( "git commit -am");
+  console.log( "git push origin master");
+  console.log( "");
+  console.log( "authenticate....");
+  console.log( "update phonegap code ( ask if it can be skipped ) ");
+  console.log( "rebuild phonegap ( POST )");
+  console.log( "download ( GET )");
+  console.log( "");
+  console.log( "adb uninstall com.ppcano.name");
+  console.log( "adb install build/*apk");
+  console.log( "--------------------------------------- ");
+}
+
+if (program.mongo) { 
+  console.log( "mongod");
+}
+
