@@ -1,0 +1,12 @@
+
+# Adjust $PATH
+if [ -d ~/.scripts ] ; then
+  export PATH=$HOME/.scripts:$PATH
+fi
+
+if [ -d /usr/local/share/android-sdk-mac_x86 ] ; then
+  export PATH=$PATH:/usr/local/share/android-sdk-mac_x86/tools
+  export PATH=$PATH:/usr/local/share/android-sdk-mac_x86/platform-tools
+fi
+
+#export PATH=/usr/local/node/bin$PATH
