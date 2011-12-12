@@ -3,7 +3,7 @@
 var program = require('commander');
 
 program
-  .option('git, --git [type]', 'fork update merge new reset push')
+  .option('git, --git [type]', 'fork update merge new reset push submodule')
   .option('android, --android', '')
   .option('ripple, --ripple', '')
   .option('heroku, --heroku', '')
@@ -60,6 +60,12 @@ if (program.git) {
     console.log( "  git reset --hard HEAD ( the repository )");
     console.log( "  git checkout -- hello.rb");
     console.log( "  git checkout HEAD hello.rb");
+
+  } else if (cmd === 'submodule') { 
+ 
+    console.log( "  git submodule add git@github.com:pepe/bill lib/bill");
+    console.log( "  git submodule init");
+    console.log( "  git submodule update");
 
   } else {
     console.log( program.helpInformation() );
