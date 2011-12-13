@@ -3,7 +3,7 @@
 var program = require('commander');
 
 program
-  .option('git, --git [type]', 'fork update merge new reset push submodule')
+  .option('git, --git [type]', 'fork update merge new reset push submodule branch')
   .option('android, --android', '')
   .option('ripple, --ripple', '')
   .option('heroku, --heroku', '')
@@ -35,14 +35,14 @@ if (program.git) {
     console.log( "-->git push origin master");
     console.log( "-->git push origin current_branch( either master or branch_name, when move to this branch)");
 
-  } else if (cmd === 'create') { 
+  } else if (cmd === 'new') { 
  
     console.log( "Creating new (go to github)");
     console.log( "  mkdir project// cd project//git init // touch // git add . // git commit.....  ");
     console.log( "  git remote add origin git@github.com:ppcano/sc-model.git");
     console.log( "  git push -u origin master");
 
-    console.log( "--------------------------------------- ");
+  } else if (cmd === 'branch') { 
     console.log( "  [git branch] -a 'list' || -d name 'delete' || name 'create local branch'  ");
     console.log( "  (Create Remote branch an fetch -f) git remote add branch_name git://github.com/ppcano/name.git -f");
     console.log( "  git checkout branch_name ( move to different branch )");
@@ -52,8 +52,8 @@ if (program.git) {
   } else if (cmd === 'merge') { 
  
     console.log( "Merge branch to master");
-    console.log( "-->git checkout master");
-    console.log( "-->git merge branch");
+    console.log( "   git checkout master");
+    console.log( "   git merge branch");
 
   } else if (cmd === 'reset') { 
  
