@@ -4,6 +4,8 @@
 #
 
 vim_plugin_task "handlebars",        "git://github.com/nono/vim-handlebars.git"
+vim_plugin_task "jade",             "git://github.com/vim-scripts/jade.vim.git"
+
 #vim_plugin_task "handlebars" do
 #  sh "curl https://raw.github.com/defunkt/mustache/master/contrib/mustache.vim > syntax/handlebars.vim"
 #  File.open(File.expand_path('../ftdetect/handlebars.vim', __FILE__), 'w') do |file|

@@ -9,6 +9,7 @@ program
   .option('heroku, --heroku', '')
   .option('phonegap, --phonegap', '')
   .option('mongo, --mongo', '')
+  .option('npm, --npm', '')
   .parse(process.argv);
 
 if (program.git) { 
@@ -46,8 +47,8 @@ if (program.git) {
     console.log( "  [git branch] -a 'list' || -d name 'delete' || name 'create local branch'  ");
     console.log( "  (Create Remote branch an fetch -f) git remote add branch_name git://github.com/ppcano/name.git -f");
     console.log( "  git checkout branch_name ( move to different branch )");
-    console.log( "  git checkout -b branch_name remotes/origin/branch_name ( to work on this branch )");
     console.log( "  git push --all ( create the remote branch on github remote [ after -> create branch || move to branch ] )");
+    console.log( "  git checkout -b branch_name remotes/origin/branch_name ( to work on this branch )");
 
   } else if (cmd === 'merge') { 
  
@@ -146,5 +147,9 @@ if (program.phonegap) {
 
 if (program.mongo) { 
   console.log( "mongod");
+}
+
+if (program.npm) { 
+  console.log( "npm");
 }
 
