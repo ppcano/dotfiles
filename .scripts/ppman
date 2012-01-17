@@ -45,11 +45,8 @@ if (program.git) {
 
   } else if (cmd === 'branch') { 
     console.log( "  [git branch] -a 'list' || -d name 'delete' || name 'create local branch'  ");
-    console.log( "  (Create Remote branch an fetch -f) git remote add branch_name git://github.com/ppcano/name.git -f");
     console.log( "  git checkout branch_name ( move to different branch )");
     console.log( "  git push --all ( create the remote branch on github remote [ after -> create branch || move to branch ] )");
-    console.log( " ??? git checkout -b branch_name remotes/origin/branch_name ( to work on this branch )");
-    console.log( " *** See push/merge ");
 
   } else if (cmd === 'merge') { 
  
