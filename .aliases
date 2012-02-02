@@ -8,7 +8,7 @@ alias ll='tree --dirsfirst -ChFupDaLg 1'
 #alias curl=aug-curl
 # Utilities
 #alias a="ack -ia"
-#alias d="du -h -d=1"
+alias d="du -h -d=1"
 #alias df="df -h"
 alias g="git"
 alias grep='GREP_COLOR="1;37;45" LANG=C grep --color=auto'
