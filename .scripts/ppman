@@ -51,6 +51,11 @@ if (program.git) {
     console.log( "  git push --all ( create the remote branch on github remote [ after -> create branch || move to branch ] )");
     console.log( "  *****************************");
     console.log( "  ( create local branch assign to a remote branch ) git branch --track nav_view remotes/origin/nav_view ");
+    console.log( "  ***(remove branch");
+    console.log( "  git push origin :name (OJO:)");
+    console.log( "  git branch -d name");
+
+
 
   } else if (cmd === 'merge') { 
  
