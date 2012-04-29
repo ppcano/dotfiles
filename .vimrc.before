@@ -1,0 +1,3 @@
+let mapleader = ","
+"set autowriteall
+"au FocusLost * silent! wa

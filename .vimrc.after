@@ -1,5 +1,4 @@
 
-
 "clipboard working with vim
 set clipboard=unnamed
 
@@ -20,7 +19,13 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 "automatic saving
-au FocusLost * :wa
+":au FocusLost * :wa
+"
+set autowriteall
+"au FocusLost * silent! wa
+
+
+nmap <leader><leader> :ZoomWin<CR>
 
 "split views
 " open new vertical split [leader + s]

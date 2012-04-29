@@ -1,0 +1,8 @@
+
+color vividchalk
+set lines=100 columns=150
+set guioptions-=T         " Remove toolbar
+set guioptions-=r         " Remove right scrollbar
+set fu
+
+"defaults write org.vim.MacVim MMNativeFullScreen 0  
