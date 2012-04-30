@@ -2,6 +2,22 @@
   name = Pepe Cano
   email = ppcanodehuelva@gmail.com
 
+[alias]
+  br = branch
+  ci = commit
+  co = checkout
+  df = diff
+  g = grep -I
+  lg = log -p
+  pb = publish-branch
+  pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
+  rb = rbranch
+  rc = rank-contributors
+  rv = review
+  sm = show-merges
+  st = status
+	ac = !git add -A && git commit -am
+
 [apply]
 whitespace = fix
 [core]

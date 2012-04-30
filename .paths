@@ -9,5 +9,8 @@ if [ -d /usr/local/share/android-sdk-mac_x86 ] ; then
   export PATH=$PATH:/usr/local/share/android-sdk-mac_x86/platform-tools
 fi
 
+if [ -d /usr/local/git/bin ] ; then
+  export PATH=$PATH:/usr/local/git/bin/
+fi
 
 #export PATH=/usr/local/node/bin$PATH

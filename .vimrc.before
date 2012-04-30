@@ -1,3 +1,5 @@
 let mapleader = ","
 "set autowriteall
 "au FocusLost * silent! wa
+"
+".janus --> git clone https://github.com/groenewege/vim-less
