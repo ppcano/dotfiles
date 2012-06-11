@@ -57,3 +57,18 @@ map <CR> o<Esc>
 
 "let g:JSLintHighlightErrorLine = 1
 au BufNewFile,BufRead *.less set filetype=less
+
+" Set Python indentation options
+au FileType python setl tabstop=4 shiftwidth=4 expandtab softtabstop=4
+au FileType html setl tabstop=4 shiftwidth=4 expandtab softtabstop=4
+au FileType rst setl tabstop=4 shiftwidth=4 expandtab softtabstop=4
+au FileType djangohtml setl tabstop=4 shiftwidth=4 expandtab softtabstop=4
+
+
+au FileType handlebars setl tabstop=2 shiftwidth=2 expandtab softtabstop=2
+
+:set shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 expandtab 
+
+
+" Autoindent all files.
+set autoindent
