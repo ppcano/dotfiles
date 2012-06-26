@@ -33,3 +33,13 @@ export NODE_PATH="$NVM_DIR/$VERSION/lib/node_modules"
 
 #http://jamiecurle.co.uk/blog/installing-pip-virtualenv-and-virtualenvwrapper-on-os-x/
 [[ -s "/usr/local/bin/virtualenvwrapper.sh" ]] && source "/usr/local/bin/virtualenvwrapper.sh"
+
+
+export LANG="it_IT.UTF-8"
+export LC_COLLATE="it_IT.UTF-8"
+export LC_CTYPE="it_IT.UTF-8"
+export LC_MESSAGES="it_IT.UTF-8"
+export LC_MONETARY="it_IT.UTF-8"
+export LC_NUMERIC="it_IT.UTF-8"
+export LC_TIME="it_IT.UTF-8"
+export LC_ALL=
