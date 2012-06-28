@@ -3,7 +3,7 @@
 var program = require('commander');
 
 program
-  .option('git, --git [type]', 'fork update merge new reset push submodule branch remote')
+  .option('git, --git [type]', 'fork update merge new reset push submodule branch remote tag')
   .option('android, --android', '')
   .option('ripple, --ripple', '')
   .option('heroku, --heroku', '')
@@ -46,20 +46,28 @@ if (program.git) {
   } else if (cmd === 'branch') { 
     console.log( "  [git branch] -a 'list' || -d name 'delete' || name 'create local branch'  ");
     console.log( "  git checkout branch_name ( move to different branch )");
-
+    console.log( "   ");
     console.log( "  >>***: create the remote branch on github remote [ after -> create branch || move to branch ]");
     console.log( "  git push --all ");
-    console.log( "  >>***: create local branch assign to a remote branch");
+    console.log( "   ");
+    console.log( "  >>***: create local branch assign to a remote branch ( update remote branchs: git remote update )");
     console.log( "  git branch --track nav_view remotes/origin/nav_view ");
+    console.log( "   ");
     console.log( "  >>***: remove branch");
-    console.log( "  git push origin :name (OJO:)");
+    console.log( "  git push origin :name or git push origin --delete name");
     console.log( "  git branch -d name");
+    console.log( "  git branch -rd origin/name ( delete remote branch )");
 
   } else if (cmd === 'remote') { 
 
     console.log( "  >>***: bring new remote branchs");
     console.log( "  git remote update");
 
+  } else if (cmd === 'tag') { 
+
+    console.log( "  git tag -a v1.4 -m 'version 1.4'");
+    console.log( "  git show v1.4 || git tag");
+    console.log( "  git push --tags");
 
   } else if (cmd === 'merge') { 
  
