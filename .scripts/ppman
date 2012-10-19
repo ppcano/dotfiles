@@ -136,6 +136,7 @@ if (program.heroku) {
   console.log( "  git push heroku heroku:master");
 
   console.log( ">>Bring Heroku App");
+  console.log( "  heroku git:remote -a app-name");
   console.log( "  git remote add heroku git@heroku.com:ppcano-fb-test.git");
 
   console.log( ">>CEDAR ");
