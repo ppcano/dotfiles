@@ -18,6 +18,33 @@ export HISTCONTROL=erasedups
 export HISTSIZE=10000
 # append to bash_history if Terminal.app quits
 shopt -s histappend
-PS1="\h:\W$ "
-#PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$PURPLE\]\$(parse_git_branch)\[$WHITE\]\n\$ \[$RESET\]"
 
+
+ORANGE="\033[1;33m"
+GREEN="\033[1;32m"
+NC='\e[0m'
+
+
+
+function parse_git_dirty() {
+
+  local output=`git status 2> /dev/null | tail -n1`
+
+  if [ ! -z "$output" ]; then
+    [[ $output != "nothing to commit (working directory clean)" ]] && echo "*"
+  fi
+}
+
+function parse_git_branch() {
+
+  local branch=`git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
+
+  if [ "$branch" != "master" ]; then
+    if [ ! -z "$branch" ]; then
+      echo "($branch)"
+    fi
+  fi
+
+}
+
+PS1="\W\[$GREEN\]\$(parse_git_branch)\[$ORANGE\]\$(parse_git_dirty)$NC: "
