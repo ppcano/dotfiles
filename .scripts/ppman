@@ -86,6 +86,11 @@ if (program.git) {
     console.log( "  git submodule add git@github.com:pepe/bill lib/bill");
     console.log( "  git submodule init");
     console.log( "  git submodule update");
+    console.log( "  -------- (remove) ");
+    console.log( "  Delete the relevant section from the .gitmodules file.");
+    console.log( "  Delete the relevant section from .git/config");
+    console.log( "  Run git rm --cached path_to_submodule (no trailing slash)");
+    console.log( "  Commit and delete the now untracked submodule files.");
 
   } else {
     console.log( program.helpInformation() );
