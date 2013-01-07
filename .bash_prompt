@@ -47,4 +47,4 @@ function parse_git_branch() {
 
 }
 
-PS1="\W\[$GREEN\]\$(parse_git_branch)\[$ORANGE\]\$(parse_git_dirty)$NC: "
+PS1="\W\[$GREEN\]\$(parse_git_branch)\[$ORANGE\]\$(parse_git_dirty)\[$NC: "
