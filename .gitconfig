@@ -42,3 +42,5 @@ changed = green
 untracked = cyan
 [merge]
 log = true
+[push]
+default = current
