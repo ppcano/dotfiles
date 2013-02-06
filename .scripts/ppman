@@ -83,7 +83,7 @@ if (program.git) {
 
   } else if (cmd === 'submodule') { 
  
-    console.log( "  git submodule add git@github.com:pepe/bill lib/bill");
+    console.log( "  git submodule add git@github.com:pepe/bill.git lib/bill");
     console.log( "  git submodule init");
     console.log( "  git submodule update");
     console.log( "  -------- (remove) ");
