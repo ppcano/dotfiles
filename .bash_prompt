@@ -31,7 +31,7 @@ function parse_git_dirty() {
   local output=`git status 2> /dev/null | tail -n1`
 
   if [ ! -z "$output" ]; then
-    [[ $output != "nothing to commit (working directory clean)" ]] && echo "*"
+    [[ $output != "nothing to commit, working directory clean" ]] && echo "*"
   fi
 }
 
@@ -47,4 +47,5 @@ function parse_git_branch() {
 
 }
 
-PS1="\W\[$GREEN\]\$(parse_git_branch)\[$ORANGE\]\$(parse_git_dirty)\[$NC: "
+#PS1="\W\[$GREEN\]\$(parse_git_branch)\[$ORANGE\]\$(parse_git_dirty)\[$NC: "
+PS1="\W\[$ORANGE\]\$(parse_git_dirty)\[$NC: "
