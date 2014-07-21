@@ -92,6 +92,11 @@ if (program.git) {
     console.log( "  Run git rm --cached path_to_submodule (no trailing slash)");
     console.log( "  Commit and delete the now untracked submodule files.");
 
+  } else if (cmd === 'amend') { 
+ 
+    console.log( "  git commit --amend -m \"Your new message\"");
+    console.log( "  git push -f ");
+
   } else {
     console.log( program.helpInformation() );
   }
