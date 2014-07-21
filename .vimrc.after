@@ -62,6 +62,19 @@ endfunction
 nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
 nmap <silent> <leader>pw :call DoWindowSwap()<CR>
 
+function! ToggleNerdTreeIgnore()
+    if g:NERDTreeIgnore == []
+      let g:NERDTreeIgnore=['tmp', 'node_modules', 'dist']
+    else
+      let g:NERDTreeIgnore=[]
+    endif
+    exec 'normal '.g:NERDTreeMapRefreshRoot
+endfunction
+
+nmap Z :call ToggleNerdTreeIgnore()<cr>
+
+let g:NERDTreeIgnore=['tmp', 'node_modules', 'dist']
+
 "nnoremap <C-=> <C-w>=http://vim.1045645.n5.nabble.com/unable-to-map-ctrl-1-td1186261.html
 "
 " zoomview
