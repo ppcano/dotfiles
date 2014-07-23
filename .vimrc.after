@@ -77,6 +77,9 @@ let g:NERDTreeIgnore=['tmp', 'node_modules', 'dist']
 
 nmap <leader>B :Bookmark<CR>
 
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_check_on_open = 1
+
 "nnoremap <C-=> <C-w>=http://vim.1045645.n5.nabble.com/unable-to-map-ctrl-1-td1186261.html
 "
 " zoomview
