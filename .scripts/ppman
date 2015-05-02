@@ -57,6 +57,11 @@ if (program.git) {
     console.log( "  git push origin :name or git push origin --delete name");
     console.log( "  git branch -d name");
     console.log( "  git branch -rd origin/name ( delete remote branch )");
+    console.log( " "); 
+    console.log( "  >>***: rename branch");
+    console.log( "  git branch -m old_branch new_branch         # Rename branch locally");
+    console.log( "  git push origin :old_branch");
+    console.log( "  git push --set-upstream origin new_branch");
 
   } else if (cmd === 'remote') { 
 
