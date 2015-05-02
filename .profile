@@ -25,7 +25,7 @@ if [ -f ~/.nvm/nvm.sh ]; then
   source ~/.nvm/nvm.sh
 fi
 
-export NODE_PATH="$NVM_DIR/$VERSION/lib/node_modules"
+#export NODE_PATH="$NVM_DIR/$VERSION/lib/node_modules"
 
 # this loads RVM into a shell session
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"

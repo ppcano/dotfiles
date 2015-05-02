@@ -111,7 +111,8 @@ au FileType handlebars setl tabstop=2 shiftwidth=2 expandtab softtabstop=2
 
 :set shiftwidth=2 tabstop=2 softtabstop=2 shiftwidth=2 expandtab 
 
-
+"http://stackoverflow.com/questions/1098159/vim-stop-existing-swap-file-warnings
+set shortmess+=A
 " Autoindent all files.
 set autoindent
 
