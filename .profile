@@ -52,3 +52,7 @@ export LC_ALL=
 # Running Cassandra: http://christopher-batey.blogspot.com.es/2013/05/installing-cassandra-on-mac-os-x.html
 #http://stackoverflow.com/questions/25276329/cant-load-python-modules-installed-via-pip-from-site-packages-directory
 export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/site-packages
+
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
+#check .settings
