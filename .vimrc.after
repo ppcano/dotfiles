@@ -64,7 +64,7 @@ nmap <silent> <leader>pw :call DoWindowSwap()<CR>
 
 function! ToggleNerdTreeIgnore()
     if g:NERDTreeIgnore == []
-      let g:NERDTreeIgnore=['tmp', 'node_modules', 'dist']
+      let g:NERDTreeIgnore=['tmp', 'bower_components', 'node_modules', 'dist', '\.pyc$']
     else
       let g:NERDTreeIgnore=[]
     endif
@@ -73,7 +73,7 @@ endfunction
 
 nmap Z :call ToggleNerdTreeIgnore()<cr>
 
-let g:NERDTreeIgnore=['tmp', 'node_modules', 'dist']
+let g:NERDTreeIgnore=['tmp', 'bower_components', 'node_modules', 'dist', '\.pyc$']
 
 nmap <leader>B :Bookmark<CR>
 
