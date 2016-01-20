@@ -13,4 +13,8 @@ if [ -d /usr/local/git/bin ] ; then
   export PATH=/usr/local/git/bin/:$PATH
 fi
 
+if [ -d /usr/local/Cellar/phantomjs/2.0.1/bin ] ; then
+  export PATH=/usr/local/Cellar/phantomjs/2.0.1/bin/:$PATH
+fi
+
 #export PATH=/usr/local/node/bin$PATH
