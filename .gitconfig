@@ -19,6 +19,7 @@
 	ac = !git add -A && git commit -am
   lg = !git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   release = !git flow release start `date +'%Y%m%d-%k%M00'`
+  setup-fetching-prs= !git config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*' && git fetch origin
 
 [apply]
 whitespace = fix
