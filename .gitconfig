@@ -6,20 +6,35 @@
   br = branch
   ci = commit
   co = checkout
+  diff = diff --word-diff
+  dc = diff --cached
   df = diff
   g = grep -I
   lg = log -p
-  pb = publish-branch
-  pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
-  rb = rbranch
-  rc = rank-contributors
+  r = reset
+  r1 = reset HEAD^
+  rh = reset --hard
+  rh1 = reset HEAD^ --hard
+  sl = stash list
+  sa = stash apply
+  ss = stash save
+  sp = stash pop
   rv = review
   sm = show-merges
-  st = status
+  st = status -s
 	ac = !git add -A && git commit -am
+  whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
+  pp = !git pull && git push
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  dl = "!git ll -1"
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || [ $# = 1 ] && [ $1 = \"--list\" ] && git config --list | grep \"alias\\.\" | sed \"s/^alias\\.\\([^=]*\\)=\\(.*\\).*/\\1@@@@=>@@@@\\2/\" | sort | column -ts \"@@@@\" && exit 0 || echo \"usage: git alias <new alias> <original command>\\n       git alias --list\" >&2 && exit 1' -"
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   lg = !git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   release = !git flow release start `date +'%Y%m%d-%k%M00'`
   setup-fetching-prs= !git config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*' && git fetch origin
+  setup-fetching-upstream-prs= !git config --add remote.upstream.fetch '+refs/pull/*/head:refs/remotes/upstream/pr/*' && git fetch upstream
 
 [apply]
 whitespace = fix
@@ -48,3 +63,9 @@ untracked = cyan
 log = true
 [push]
 default = current
+[pull]
+default = current
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[diff]
+    mnemonicprefix = true
