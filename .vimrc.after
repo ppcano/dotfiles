@@ -84,7 +84,7 @@ set statusline+=%*
 
 let g:syntastic_mode_map = { 'mode': 'active',
     \ 'active_filetypes': [],
-    \ 'passive_filetypes': ['html', 'handlebars', 'hbs'] }
+    \ 'passive_filetypes': ['html', 'handlebars', 'hbs', 'go'] }
 
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_python_checkers=['pep8', 'python']
@@ -95,6 +95,19 @@ let g:syntastic_loc_list_height = 5
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
+
+"https://github.com/fatih/vim-go-tutorial
+let g:go_fmt_command = "goimports"
+"let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_enabled = ['vet', 'errcheck']
+let g:go_metalinter_autosave = 1
+"let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_deadline = "5s"
+let g:go_autodetect_gopath = 0
+
+"let g:syntastic_go_checkers = ['govet', 'errcheck', 'go']
+"let g:syntastic_aggregate_errors = 1
+"let g:go_list_type = "quickfix"
 
 nmap <leader>st :SyntasticToggleMode<CR>
 
