@@ -13,4 +13,8 @@ if [ -d /usr/local/git/bin ] ; then
   export PATH=/usr/local/git/bin/:$PATH
 fi
 
+if [ -d ~/.npm-global/ ] ; then
+  export PATH=$HOME/.npm-global:$PATH
+fi
+
 #export PATH=/usr/local/node/bin$PATH
