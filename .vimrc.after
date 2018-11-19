@@ -149,20 +149,6 @@ set shortmess+=A
 " Autoindent all files.
 set autoindent
 
-"http://stackoverflow.com/questions/29819168/how-can-i-integrate-jscs-autofix-feature-into-vim
-function! JscsFix()
-    "Save current cursor position"
-    let l:winview = winsaveview()
-    "Pipe the current buffer (%) through the jscs -x command"
-    % ! jscs -x
-    "Restore cursor position - this is needed as piping the file"
-    "through jscs jumps the cursor to the top"
-    call winrestview(l:winview)
-endfunction
-command Jfix :call JscsFix()
-
-"autocmd BufWritePre *.js Jfix
-
 if has("gui_running")
     "set guioptions=-mTr
     set guioptions-=T         " Remove macvim toolbar
