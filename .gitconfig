@@ -35,8 +35,8 @@
   release = !git flow release start `date +'%Y%m%d-%k%M00'`
   setup-fetching-prs= !git config --add remote.origin.fetch '+refs/pull/*/head:refs/remotes/origin/pr/*' && git fetch origin
   setup-fetching-upstream-prs= !git config --add remote.upstream.fetch '+refs/pull/*/head:refs/remotes/upstream/pr/*' && git fetch upstream
-  ignore = !git update-index --assume-unchanged
-  unignore = !git update-index --no-assume-unchanged
+  ignore = !git update-index --skip-worktree
+  unignore = !git update-index --no-skip-worktree
   ignored = !git ls-files -v | grep ^[a-z]
 
 [apply]
