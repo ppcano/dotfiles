@@ -112,7 +112,7 @@ let g:go_autodetect_gopath = 0
 nmap <leader>st :SyntasticToggleMode<CR>
 
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx Prettier
+"autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx Prettier
 "nnoremap <C-=> <C-w>=http://vim.1045645.n5.nabble.com/unable-to-map-ctrl-1-td1186261.html
 "
 " zoomview
