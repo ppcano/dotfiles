@@ -30,6 +30,8 @@ if (program.git) {
     console.log( "    git merge upstream/master");
     console.log( "-->CLONE");
     console.log( "    git pull");
+    console.log( "-->Force your forked repo to be the same as upstream");
+    console.log( "    git reset --hard upstream/master");
 
   } else if (cmd === 'push') { 
  
