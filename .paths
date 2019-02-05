@@ -17,4 +17,10 @@ if [ -d ~/.npm-global/bin ] ; then
   export PATH=$HOME/.npm-global/bin:$PATH
 fi
 
+if [ -d ~/dev/go ] ; then
+  export GOPATH=$HOME/dev/go
+  export PATH=$PATH:$GOPATH/bin
+fi
+
+
 #export PATH=/usr/local/node/bin$PATH
